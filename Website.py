@@ -1,5 +1,4 @@
 from flask import Flask, render_template
-
 app = Flask(__name__)
 
 
@@ -14,7 +13,8 @@ def about():
 
 
 @app.route("/contact")
-def contact():
+def Contact():
+
     return render_template("contact.html")
 
 
@@ -22,5 +22,8 @@ def contact():
 def services():
     return render_template("services.html")
 
+@app.route("/index")
+def index():
+    return render_template("index.html")
 
 app.run(debug=True)
